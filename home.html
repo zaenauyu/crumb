@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=100%">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <title>crumb</title>
+  <link rel="stylesheet" href="css/website.css">
+  <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+
+</style>
+</head>
+<body>
+
+  <!--Navigation Bar-->
+  <main>
+    <!--LOGO-->
+      <div class="navigation">
+        <div class="image-container">
+          <img src="images/logowname.png" alt="First Image">
+          <img class="overlay-image" src="images/logowname1.png" alt="Second Image">
+      </div>
+      <!--BUTTONS-->
+          <div class="button-container">
+            <a class="nav-button" href="home.html">HOME</a>
+            <a class="nav-button" href="OURPRODUCTSPAGE.html">OUR PRODUCTS</a>
+            <a class="nav-button" href="aboutus.html">ABOUT US</a>
+            <a class="nav-button" href="help.html">HELP</a>
+            <a class="nav-button order-now" href="OURPRODUCTSPAGE.html">ORDER NOW</a>
+          </div>
+      </div>
+
+
+<div class="gif-container">
+<div class="mySlides fade">
+
+  <img src="images/3.png" style="width:1600px">
+<!--Details -->
+  
+  <div class="pastry" >Croissant</div>
+  
+  <div class="text">
+    <pre>
+      Start your day with the buttery, flaky layers of our homemade croissants. Baked fresh every morning, these golden pastries 
+      are a testament to our dedication to traditional techniques, bringing a touch of Parisian magic to your breakfast table or 
+      as a delightful snack any time of day. Pair them with your favorite coffee or tea for a truly delightful experience.
+
+    </pre> 
+  </div>
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/2.png"style="width:1600px">
+  <div class="pastry">Danish Pastry</div>
+  <div class="text">
+    <pre>
+      Delight in the sweet, tender layers of our homemade Danish pastries. Filled with creamy custard and topped with a drizzle 
+      of icing, each pastry is made with love and care, offering a perfect blend of textures and flavors that make breakfast or 
+      dessert feel extra special. Enjoy one as a morning treat or a sweet afternoon pick-me-up.
+      
+    </pre></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/1.png"style="width:1600px">
+  <div class="pastry">Cheesecake</div>
+  <div class="text">
+    
+    <pre>
+      Treat yourself to a slice of our beloved homemade cheesecake, lovingly crafted in our bakery. Each bite offers a dreamy, 
+      melt-in-your-mouth experience with a perfect balance of rich, creamy filling and a crumbly graham cracker crust. Made with 
+      the finest ingredients, our cheesecake is a heavenly delight that brings comfort and joy to any occasion. You’ll taste the 
+      love and tradition in every forkful.
+
+    </pre>
+  </div>
+</div>
+
+</div>
+
+
+      <!--BOTTOM BAR-->
+      <div class="bottom-bar"></div>
+<br>
+
+<!--
+    <div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+-->
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+ // for (i = 0; i < dots.length; i++) {
+  //  dots[i].className = dots[i].className.replace(" active", "");
+ // }
+  slides[slideIndex-1].style.display = "block";  
+//  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+</body>
+</html>

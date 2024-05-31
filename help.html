@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <title>crumb</title>
+  <link rel="stylesheet" href="css/website.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+<body>
+
+  <!--Navigation Bar-->
+  <main>
+    <!--LOGO-->
+      <div class="navigation">
+        <div class="image-container">
+          <img src="images/logowname.png" alt="First Image">
+          <img class="overlay-image" src="images/logowname1.png" alt="Second Image">
+      </div>
+     <!--BUTTONS-->
+     <div class="button-container">
+      <a class="nav-button" href="home.html">HOME</a>
+            <a class="nav-button" href="OURPRODUCTSPAGE.html">OUR PRODUCTS</a>
+            <a class="nav-button" href="aboutus.html">ABOUT US</a>
+            <a class="nav-button" href="help.html">HELP</a>
+            <a class="nav-button order-now" href="OURPRODUCTSPAGE.html">ORDER NOW</a>
+      </div>
+  </div>
+     
+
+<!--TITLE-->
+<div class="titlepage">
+    <h1>HELP</h1>
+  </div>
+
+<!--Details-->
+<div class="titlepage">
+    <h4> FREQUENTLY ASKED QUESTION </h4>
+  </div>
+
+
+<div class="faqs"> 
+  
+<button type="button" class="collapsible">1. What are your opening hours?</button>
+<div class="content">
+  <p>We are open Monday to Saturday from 7:00 AM to 7:00 PM, and Sunday from 8:00 AM to 4:00 PM.</p>
+</div>
+
+<button type="button" class="collapsible">2. Where are you located?</button>
+<div class="content">
+  <p> You can find us Magsaysay, Naga City. We're conveniently located in the heart of downtown, with ample parking available.</p>
+</div>
+
+<button type="button" class="collapsible">3. Do you offer gluten-free or vegan options? </button>
+<div class="content">
+  <p>Yes, we offer a variety of gluten-free and vegan pastries. Look for our specially marked items in the display case, or ask a staff member for recommendations.</p>
+</div>
+
+<button type="button" class="collapsible">4.How far in advance should I place a custom order? </button>
+<div class="content">
+  <p>For custom cakes and large pastry orders, we recommend placing your order at least one week in advance. For larger or more intricate designs, two weeks' notice is preferred.</p>
+</div>
+
+<button type="button" class="collapsible">5. Do you cater events? </button>
+<div class="content">
+  <p>Yes, we offer catering services for events of all sizes, including weddings, birthdays, corporate events, and more. Contact us for more details and to discuss your specific needs.</p>
+</div>
+
+<button type="button" class="collapsible">6. Do you offer delivery? </button>
+<div class="content">
+  <p>Yes, we offer delivery within a 10-mile radius of our bakery. Delivery fees apply based on the distance. Please call us to arrange delivery.</p>
+</div>
+
+<button type="button" class="collapsible">7. What payment methods do you accept?</button>
+<div class="content">
+  <p>We accept cash, all major credit cards, and mobile payment options such as Apple Pay and Google Wallet.</p>
+</div>
+
+<button type="button" class="collapsible">8. Can I buy gift cards?</button>
+<div class="content">
+  <p>Yes, gift cards are available for purchase in-store and online. They make the perfect gift for any occasion!</p>
+</div>
+
+<button type="button" class="collapsible">9. How can I stay updated on new products and special offers?</button>
+<div class="content">
+  <p>Follow us on social media and sign up for our newsletter to stay informed about new products, special offers, and upcoming events.</p>
+</div>
+
+<button type="button" class="collapsible">10. What is your return policy?</button>
+<div class="content">
+  <p>Due to the perishable nature of our products, all sales are final. However, if you are unsatisfied with your purchase, please contact us within 24 hours and we will do our best to address your concerns.</p>
+</div>
+
+<button type="button" class="collapsible">11. Do you offer baking classes?</button>
+<div class="content">
+  <p>Yes, we occasionally offer baking classes for both adults and children. Check our website or social media pages for upcoming class schedules and registration details.
+</p>
+</div>
+ 
+ 
+ 
+ 
+</div>
+
+
+ <!--BOTTOM BAR-->
+ <div class="bottom-bar"></div>
+
+ <!--Details-->
+
+</div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+</body>
+</html> 
+
+

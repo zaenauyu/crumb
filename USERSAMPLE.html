@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <title>crumb</title>
+  <link rel="stylesheet" href="css/website.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+   
+    .image-wrapper img {
+      width: 52px; 
+      height: 52px; 
+    }
+
+    /* Popup image style */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      right:0px;
+      transform: translate(0, -50%); 
+      z-index: 9999;
+    }
+    .popup img {
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Overlay style */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 9998; 
+    }
+  </style>
+</head>
+<body>
+    <div class="image-wrapper">
+        <!-- Give both images the same onclick function -->
+      
+        <button onclick="openPopup(event, 'USER PROFILE.png')"><img src="images/person.png" alt="Person"></button>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Popup container -->
+    <div id="popup" class="popup">
+        <img id="profileImage" src="images/USER PROFILE.png" alt="User Profile">
+    </div>
+
+    <script>
+        // JavaScript function to open the popup
+        function openPopup(event, imageName) {
+            var popup = document.getElementById("popup");
+            var overlay = document.getElementById("overlay");
+            var profileImage = document.getElementById("profileImage");
+            profileImage.src = "images/" + imageName;
+            popup.style.display = "block";
+            overlay.style.display = "block";
+            event.stopPropagation(); 
+            document.addEventListener('click', closePopupOutside);
+        }
+
+        // JavaScript function to close the popup
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            var overlay = document.getElementById("overlay");
+            popup.style.display = "none";
+            overlay.style.display = "none";
+            document.removeEventListener('click', closePopupOutside);
+        }
+
+        // JavaScript function to close popup when clicking outside profile image
+        function closePopupOutside(event) {
+            var profileImage = document.getElementById("profileImage");
+            var popup = document.getElementById("popup");
+            var overlay = document.getElementById("overlay");
+            if (event.target !== profileImage && !profileImage.contains(event.target)) {
+                popup.style.display = "none";
+                overlay.style.display = "none";
+                document.removeEventListener('click', closePopupOutside);
+            }
+        }
+    </script>
+</body>
+</html>
